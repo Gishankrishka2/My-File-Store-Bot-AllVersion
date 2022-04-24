@@ -31,11 +31,11 @@ async def start(c, m, cb=False):
     # Buttons
     buttons = [
         [
-            InlineKeyboardButton('My Father 👨‍✈️', url=f"https://t.me/{owner_username}"),
-            InlineKeyboardButton('Help 💡', callback_data="help")
+            InlineKeyboardButton('🌷 ᴍʏ ғᴀᴛʜᴇʀ 🌷', url=f"https://t.me/{owner_username}"),
+            InlineKeyboardButton('🌷 ʜᴇʟᴘ 🌷', callback_data="help")
         ],
         [
-            InlineKeyboardButton('About 📕', callback_data="about")
+            InlineKeyboardButton('🍁 ᴀʙᴏᴜᴛ 🍁', callback_data="about")
         ]
     ]
 
