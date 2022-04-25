@@ -3,7 +3,7 @@ import urllib
 from pyrogram import Client, filters
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup
 DB_CHANNEL_ID = os.environ.get("DB_CHANNEL_ID")
-
+C_LINK = os.environ.get("C_LINK")
 
 
 #################################### FOR PRIVATE ################################################
@@ -46,14 +46,16 @@ async def storefile(c, m):
 
     # creating urls
     bot = await c.get_me()
-    url = f"https://t.me/{bot.username}?start={m.chat.id}_{m.message_id}" if not DB_CHANNEL_ID else f"https://t.me/{bot.username}?start={m.chat.id}_{msg.message_id}"
+    url = f"https://t.me/File2linkv1_bot?start={m.chat.id}_{m.message_id}" if not DB_CHANNEL_ID else f"https://t.me/File2linkv1_bot?start={m.chat.id}_{msg.message_id}"
     txt = urllib.parse.quote(text.replace('--', ''))
-    share_url = f"tg://share?url={txt}File%20Link%20👉%20{url}"
+    share_url = f"https://t.me/share/url?url={txt}File%20Link%20👉%20{url}"
+    sharechannel = f"https://t.me/{C_LINK}
 
     # making buttons
     buttons = [[
-        InlineKeyboardButton(text="Open Url 🔗", url=url),
-        InlineKeyboardButton(text="Share Link 👤", url=share_url)
+        InlineKeyboardButton(text="⛓ sʜᴀʀᴇᴀʙʟᴇ ʟɪɴᴋ ⛓", url=url),
+        InlineKeyboardButton(text="☘️ sʜᴀʀᴇ ʟɪɴᴋ ☘️", url=share_url),
+        InlineKeyboardButton(text="💐 sʜᴀʀᴇ ᴀɴᴅ sᴜᴘᴘᴏʀᴛ ᴜs 💐", url=sharechannel)
     ]]
 
     # sending message
@@ -103,14 +105,15 @@ async def storefile_channel(c, m):
 
     # creating urls
     bot = await c.get_me()
-    url = f"https://t.me/{bot.username}?start={m.chat.id}_{m.message_id}" if not DB_CHANNEL_ID else f"https://t.me/{bot.username}?start={m.chat.id}_{msg.message_id}"
+    url = f"https://t.me/File2linkv1_bot?start={m.chat.id}_{m.message_id}" if not DB_CHANNEL_ID else f"https://t.me/File2linkv1_bot?start={m.chat.id}_{msg.message_id}"
     txt = urllib.parse.quote(text.replace('--', ''))
-    share_url = f"tg://share?url={txt}File%20Link%20👉%20{url}"
-
+    share_url = f"https://t.me/share/url?url={txt}File%20Link%20👉%20{url}"
+    sharechannel = f"https://t.me/{C_LINK}"
     # making buttons
     buttons = [[
-        InlineKeyboardButton(text="Open Url 🔗", url=url),
-        InlineKeyboardButton(text="Share Link 👤", url=share_url)
+        InlineKeyboardButton(text="⛓ sʜᴀʀᴇᴀʙʟᴇ ʟɪɴᴋ ⛓", url=url),
+        InlineKeyboardButton(text="☘️ sʜᴀʀᴇ ʟɪɴᴋ ☘️", url=share_url),
+        InlineKeyboardButton(text="💐 sʜᴀʀᴇ ᴀɴᴅ sᴜᴘᴘᴏʀᴛ ᴜs 💐", url=sharechannel)
     ]]
 
     # Editing and adding the buttons
