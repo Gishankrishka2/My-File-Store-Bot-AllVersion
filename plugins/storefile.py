@@ -49,7 +49,7 @@ async def storefile(c, m):
     url = f"https://t.me/File2linkv1_bot?start={m.chat.id}_{m.message_id}" if not DB_CHANNEL_ID else f"https://t.me/File2linkv1_bot?start={m.chat.id}_{msg.message_id}"
     txt = urllib.parse.quote(text.replace('--', ''))
     share_url = f"https://t.me/share/url?url={txt}File%20Link%20👉%20{url}"
-    sharechannel = f"https://t.me/{C_LINK}
+    sharechannel = f"https://t.me/{C_LINK}"
 
     # making buttons
     buttons = [[
